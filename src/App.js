@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
 
-function App() {
+const Map = ReactMapboxGl({
+  accessToken:
+    'pk.eyJ1IjoiYmNhcm1vZHkxNiIsImEiOiJjanN5MHBvMTEwa2ttM3lxeDI3d2VsMDBhIn0.UnU1G3ujwJpEa7ONbpezQg'
+});
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Map
+        style="mapbox://styles/mapbox/outdoors-v10" //eslint-disable-line
+        containerStyle={{
+          height: '100vh',
+          width: '100vw'
+        }}
+      >
+        <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
+          <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
+        </Layer>
+      </Map>
+    </React.Fragment>
   );
-}
+};
 
 export default App;
