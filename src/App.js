@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
 
+const API_KEY = `${process.env.REACT_APP_API_KEY}`;
+
 const Map = ReactMapboxGl({
-  accessToken:
-    'pk.eyJ1IjoiYmNhcm1vZHkxNiIsImEiOiJjanN5MHBvMTEwa2ttM3lxeDI3d2VsMDBhIn0.UnU1G3ujwJpEa7ONbpezQg'
+  accessToken: API_KEY
 });
 
 const App = () => {
