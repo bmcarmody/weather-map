@@ -1,36 +1,18 @@
-import React, { useState } from 'react';
-import ReactMapboxGl from 'react-mapbox-gl';
-import Geocoder from 'react-geocoder-autocomplete';
+import React from 'react';
 
-const API_KEY = `${process.env.REACT_APP_API_KEY}`;
+import { AppProvider } from './store/AppContext';
+import AppReducer from './store/reducers/AppReducer';
 
-const Map = ReactMapboxGl({
-  accessToken: API_KEY
-});
+import Home from './components/pages/Home';
+
+//eslint-disable-next-line
+const initialState = {};
 
 const App = () => {
-  const [mapCenter, setMapCenter] = useState(0);
-  const [map, setMap] = useState(0);
-
-  const onSelect = ({ center }) => {
-    map.state.map.flyTo({ center });
-    setMapCenter(center);
-  };
-
   return (
-    <React.Fragment>
-      <Geocoder accessToken={API_KEY} onSelect={onSelect} />
-      <Map
-        style="mapbox://styles/mapbox/outdoors-v10" //eslint-disable-line
-        containerStyle={{
-          height: '100vh',
-          width: '100vw'
-        }}
-        ref={map => {
-          setMap(map);
-        }}
-      />
-    </React.Fragment>
+    <AppProvider initialState={initialState} reducer={AppReducer}>
+      <Home />
+    </AppProvider>
   );
 };
 export default App;
