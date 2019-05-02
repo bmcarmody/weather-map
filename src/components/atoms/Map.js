@@ -21,10 +21,6 @@ const Map = () => {
     <React.Fragment>
       <MapboxMap
         style="mapbox://styles/mapbox/outdoors-v10" //eslint-disable-line
-        containerStyle={{
-          height: '100vh',
-          width: '100vw'
-        }}
         ref={map => {
           setTempMap(map);
         }}

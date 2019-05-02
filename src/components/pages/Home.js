@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Map from '../atoms/Map';
-import GeocoderSearch from '../atoms/GeocoderSearch';
+import Sidebar from '../../components/molecules/Sidebar';
 
 const Home = () => {
   return (
     <React.Fragment>
-      <GeocoderSearch />
+      <Sidebar />
       <Map />
     </React.Fragment>
   );

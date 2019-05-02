@@ -14,9 +14,13 @@ const GeocoderSearch = () => {
   };
 
   return (
-    <React.Fragment>
-      <Geocoder accessToken={MAPBOX_API_KEY} onSelect={onSelect} />
-    </React.Fragment>
+    <div className="geocoderSearch">
+      <Geocoder
+        accessToken={MAPBOX_API_KEY}
+        onSelect={onSelect}
+        types="place"
+      />
+    </div>
   );
 };
 
