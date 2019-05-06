@@ -12,8 +12,12 @@ export const getWeather = center => dispatch => {
     .then(res => console.log(res));
 };
 
-export const movePosition = (store, center) => {
+export const movePosition = (store, center) => dispatch => {
   store.map.state.map.flyTo({ center });
+  dispatch({
+    type: 'setPosition',
+    position: center
+  });
 };
 
 export const setMap = map => dispatch => {

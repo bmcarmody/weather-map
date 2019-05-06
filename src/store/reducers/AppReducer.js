@@ -4,6 +4,11 @@ const AppReducer = (state, action) => {
       return {
         map: action.map
       };
+    case 'setPosition':
+      return {
+        ...state,
+        position: action.position
+      };
     default:
       return { state };
   }

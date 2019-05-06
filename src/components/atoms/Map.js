@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ReactMapboxGl from 'react-mapbox-gl';
+import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 
 import { useAppValue } from '../../store/AppContext';
 import { setMap } from '../../store/actions/AppActions';
@@ -24,7 +24,14 @@ const Map = () => {
         ref={map => {
           setTempMap(map);
         }}
-      />
+      >
+        {store.position !== undefined && (
+          <Marker coordinates={store.position} anchor="bottom">
+            <div className="pin" />
+            <div className="pulse" />
+          </Marker>
+        )}
+      </MapboxMap>
     </React.Fragment>
   );
 };
