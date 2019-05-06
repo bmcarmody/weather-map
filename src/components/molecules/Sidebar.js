@@ -30,6 +30,19 @@ const Sidebar = props => {
           Search for a city to find out the daily weather
         </h1>
       )}
+      <div className="footer">
+        <p>Created by &copy; {new Date().getFullYear()} Brandon Carmody</p>
+        <p>
+          Powered by the{' '}
+          <a href="https://darksky.net/dev" alt="Darksky">
+            DarkSky Weather API
+          </a>{' '}
+          and the{' '}
+          <a href="https://www.mapbox.com/" alt="Mapbox">
+            Mapbox API
+          </a>
+        </p>
+      </div>
     </div>
   );
 };
