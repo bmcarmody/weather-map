@@ -11,7 +11,9 @@
     #react-geo-list {
       list-style: none;
       font-size: 1.5rem;
-      padding: 0.5rem;
+      position: absolute;
+      width: 100%;
+      background: white;
       li {
         line-height: 4rem;
         border-bottom: 1px solid grey;

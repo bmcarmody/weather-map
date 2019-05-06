@@ -9,9 +9,9 @@ const MAPBOX_API_KEY = `${process.env.REACT_APP_MAPBOX_API_KEY}`;
 const GeocoderSearch = () => {
   const [store, dispatch] = useAppValue();
 
-  const onSelect = ({ center }) => {
-    movePosition(store, center)(dispatch);
-    getWeather(center);
+  const onSelect = ({ center, text }) => {
+    movePosition(store, center, text)(dispatch);
+    getWeather(center)(dispatch);
   };
 
   return (

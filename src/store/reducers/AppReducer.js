@@ -9,6 +9,16 @@ const AppReducer = (state, action) => {
         ...state,
         position: action.position
       };
+    case 'setLocation':
+      return {
+        ...state,
+        location: action.location
+      };
+    case 'setWeather':
+      return {
+        ...state,
+        weather: action.weather
+      };
     default:
       return { state };
   }
