@@ -10,13 +10,10 @@ const DailyWeather = props => {
 
   return (
     <div className="dailyWeather">
-      <h2 className="dailyWeather__dotw">
-        {props.index === 0 ? 'Today' : dotw}
+      <h2 className="dailyWeather__dotw font-heading">
+        <strong>{props.index === 0 ? 'Today' : dotw}</strong>
       </h2>
-      {props.index === 0 && (
-        <div className="dailyWeather__location">{props.location}</div>
-      )}
-      <div className="dailyWeather__clearFix" />
+
       <div className="dailyWeather__icon">
         <Skycons icon={formattedIconString} color="white" />
       </div>

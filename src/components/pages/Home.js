@@ -6,8 +6,8 @@ import Sidebar from '../../components/molecules/Sidebar';
 const Home = () => {
   return (
     <React.Fragment>
-      <Sidebar />
       <Map />
+      <Sidebar />
     </React.Fragment>
   );
 };

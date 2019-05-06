@@ -6,11 +6,21 @@
   z-index: 20;
   overflow: auto;
 
-  &__header {
-    padding: 2rem 0;
-    text-align: center;
+  &__showMap {
+    float: right;
+    font-size: 2rem;
+    padding: 1.5rem;
   }
 
+  &__header,
   &__empty {
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .sidebar {
+    width: 100%;
   }
 }

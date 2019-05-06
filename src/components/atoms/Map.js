@@ -18,7 +18,7 @@ const Map = () => {
   }, [tempMap, dispatch]);
 
   return (
-    <React.Fragment>
+    <div className="map">
       <MapboxMap
         style="mapbox://styles/mapbox/outdoors-v10" //eslint-disable-line
         ref={map => {
@@ -32,7 +32,7 @@ const Map = () => {
           </Marker>
         )}
       </MapboxMap>
-    </React.Fragment>
+    </div>
   );
 };
 

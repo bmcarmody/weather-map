@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Condensed');
+
 *,
 *::after,
 *::before {
@@ -13,4 +15,10 @@ html {
 
 body {
   box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }

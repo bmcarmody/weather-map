@@ -5,15 +5,17 @@ import GeocoderSearch from '../atoms/GeocoderSearch';
 
 import DailyWeather from '../atoms/DailyWeather';
 
-const Sidebar = () => {
-  const [store, dispatch] = useAppValue();
+const Sidebar = props => {
+  const [store] = useAppValue();
 
   return (
     <div className="sidebar">
       <GeocoderSearch />
       {store.location ? (
         <React.Fragment>
-          <h1 className="sidebar__header">Weather for {store.location}</h1>
+          <h1 className="sidebar__header font-heading">
+            7-Day forecast for: <strong>{store.location}</strong>
+          </h1>
           {store.weather &&
             store.weather.map((weatherInfo, index) => (
               <DailyWeather
