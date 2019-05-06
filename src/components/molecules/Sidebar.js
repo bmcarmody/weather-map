@@ -13,14 +13,20 @@ const Sidebar = () => {
       <GeocoderSearch />
       {store.location ? (
         <React.Fragment>
-          <h1>Weather for {store.location}</h1>
+          <h1 className="sidebar__header">Weather for {store.location}</h1>
           {store.weather &&
             store.weather.map((weatherInfo, index) => (
-              <DailyWeather weatherInfo={weatherInfo} key={index} />
+              <DailyWeather
+                weatherInfo={weatherInfo}
+                key={index}
+                index={index}
+              />
             ))}
         </React.Fragment>
       ) : (
-        <h1>Search for a city to find out the daily weather</h1>
+        <h1 className="sidebar__empty">
+          Search for a city to find out the daily weather
+        </h1>
       )}
     </div>
   );

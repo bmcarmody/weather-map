@@ -1,0 +1,71 @@
+.dailyWeather {
+  color: white;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  padding: 1.5rem;
+
+  &:nth-of-type(2) {
+    background-color: #4130bb;
+  }
+  &:nth-of-type(3) {
+    background-color: #3bddb0;
+  }
+  &:nth-of-type(4) {
+    background-color: #f92399;
+  }
+  &:nth-of-type(5) {
+    background-color: #fab422;
+  }
+  &:nth-of-type(6) {
+    background-color: #229afa;
+  }
+  &:nth-of-type(7) {
+    background-color: #db2222;
+  }
+  &:nth-of-type(8) {
+    background-color: #2060f7;
+  }
+  &:nth-of-type(9) {
+    background-color: #7463ee;
+  }
+
+  &__dotw {
+    float: left;
+    font-size: 2.5rem;
+  }
+
+  &__location {
+    float: right;
+    font-size: 2rem;
+  }
+
+  &__icon {
+    margin-left: auto;
+    margin-right: auto;
+    width: 18rem;
+    height: 9rem;
+  }
+
+  &__summary {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 2.5rem;
+  }
+
+  &__low {
+    font-size: 2rem;
+    float: left;
+  }
+
+  &__high {
+    font-size: 2rem;
+    float: right;
+  }
+
+  &__clearFix {
+    clear: both;
+  }
+}

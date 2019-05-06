@@ -4,5 +4,13 @@
   width: 45rem;
   background: white;
   z-index: 20;
-  padding: 2rem;
+  overflow: auto;
+
+  &__header {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  &__empty {
+  }
 }
